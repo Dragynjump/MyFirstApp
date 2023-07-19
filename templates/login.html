@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Who Am I? | Login</title>
+        <link href="/static/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <main>
+			<div style="justify-content: center; display: flex; height: 100%;">
+				<!-- Left side of screen -->
+				<div class="loginLeftSide">
+					<div>
+						<h1>Login here</h1>
+					</div>
+					<div>
+						<p class="errorMessage">{{ errorMessage }}</p>
+						<form action="/login" method="POST">
+							<div style="padding-top: 5px;">
+								<input autocomplete="off" autofocus id="username" name="username"
+								placeholder="Username" type="text" class="loginInput">
+							</div>
+							<div style="padding-top: 5px;">
+								<input autocomplete="off"  id="password" name="password" placeholder="Password" type="password" class="loginInput">
+							</div>
+							<div style="padding-top: 5px;">
+								<button type="submit" class="loginSubmit">Submit</button>
+							</div>
+							<br>
+						</form>
+					</div>
+				</div>
+				<!-- Right side of screen -->
+				<div class="loginRightSide">
+					<div style="margin: 0; position: relative; top: 30%;">
+						<div>
+							<h1>Don't have an account?</h1>
+						</div>
+						<div style="padding: 5px;">
+							<h2>Sign up here!</h2>
+						</div>
+						<div style="padding-top: 10px;">
+							<a href="/register">
+							<button type="submit" class="loginOtherForm">Register</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

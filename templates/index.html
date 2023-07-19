@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+<!-- Navbar with greeting and login options -->
+{% block navcontent %}
+	{% if session['logged_in'] %}
+		<h1>Hello, {{ session["user_id"].nickname }}!</h1>
+	{% else %}
+		<h1>Welcome, friend!</h1>
+	{% endif %}
+{% endblock %}
+<!-- Lower section of webpage, a list of categories and a "Daily recommended" -->
+{% block main %}
+<div class="index">
+	<div class="indexBottom">
+		<div style="text-align: center; padding-top: 3%;">
+			<h2>Daily Recommended!</h2>
+			<div style="padding-top: 3%; display: inline-block;">
+				<div class="quizCard">
+					<img src="static/quizcardpics/{{ quizName }}.png" alt="{{ quizName }} logo"/>
+					<p class="quizCardText">{{ quizName }} Quiz</p>
+					<a href="/{{ quizLink }}">
+						<button type="submit">Start!</button>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div style="text-align: center; padding-top: 3%;">
+			<h3 style="color: #2867AE;">Categories</h3>
+		</div>
+		<div style="text-align: center; padding-top: 3%; padding-bottom: 8%;">
+			<div class="categories">
+				<div class="quizCard">
+					<img src="static/categorypics/Star Wars.png" alt="Star Wars logo"/>
+					<p class="quizCardText">Star Wars</p>
+					<a href="/space">
+						<button>Explore!</button>
+					</a>
+				</div>
+			</div>
+			<div class="categories">
+				<div class="quizCard">
+					<img src="static/categorypics/Harry Potter.png" alt="Harry Potter logo"/>
+					<p class="quizCardText">Harry Potter</p>
+					<a href="/magic">
+						<button>Explore!</button>
+					</a>
+				</div>
+			</div>
+			<div class="categories">
+				<div class="quizCard">
+					<img src="static/categorypics/Superheroes.png" alt="Superheroes logo"/>
+					<p class="quizCardText">Superheroes</p>
+					<a href="/superheroes">
+						<button>Explore!</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="viewAll" style="text-align: center; padding-bottom: 60px;">
+		<a href="/allquizzes">
+			<button>View all</button>
+		</a>
+	</div>
+</div>
+{% endblock %}

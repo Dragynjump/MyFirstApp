@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Who Am I? | Registe</title>
+        <link href="/static/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <main>
+			<div style="justify-content: center; display: flex; height: 100%;">
+				<!-- Left side of screen -->
+				<div class="loginLeftSide">
+					<div>
+						<h1>Sign up here</h1>
+					</div>
+					<div>
+						<p class="errorMessage">{{ errorMessage }}</p>
+						<form action="/register" method="POST">
+							<div style="padding-top: 5px;">
+								<input autocomplete="off" autofocus id="username" name="username"
+								placeholder="Username" type="text" class="loginInput">
+							</div>
+							<div style="padding-top: 5px;">
+								<input autocomplete="off" autofocus id="nickname" name="nickname"
+								placeholder="Nickname(optional)" type="text" class="loginInput">
+							</div>
+							<div style="padding-top: 5px;">
+								<input autocomplete="off"  id="password" name="password" placeholder="Password(4-12 characters)" type="password" class="loginInput">
+							</div>
+							<div style="padding-top: 5px;">
+								<input autocomplete="off"  id="confirm" name="confirm" placeholder="Confirm password" type="password" class="loginInput">
+							</div>
+							<div style="padding-top: 5px;">
+								<button type="submit" class="loginSubmit">Submit</button>
+							</div>
+							<br>
+						</form>
+					</div>
+				</div>
+				<!-- Right side of screen -->
+				<div class="loginRightSide">
+					<div style="margin: 0; position: relative; top: 30%;">
+						<div>
+							<h1>Already have an account?</h1>
+						</div>
+						<div style="padding: 5px;">
+							<h2>Login here!</h2>
+						</div>
+						<div style="padding-top: 10px;">
+							<a href="/login">
+							<button type="submit" class="loginOtherForm">Login</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+        </main>
+    </body>
+</html>

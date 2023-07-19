@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    All
+{% endblock %}
+
+<!-- Navbar with home button and login options -->
+{% block navcontent %}
+    <a href="/">
+        <button style="text-align: center; background-color: #2867AE; width: 60px;"><img src="static/House.png" height="50px" alt="House"></button>
+    </a>
+{% endblock %}
+<!-- Lower section of webpage, all quizzes lined up ordered by their category" -->
+{% block main %}
+<div class="index">
+    <div class="indexBottom">
+        <div style="text-align: center; padding-top: 3%; padding-bottom: 8%;">
+            <div class="categories">
+                <div class="quizCard">
+                    <img src="static/quizcardpics/{{ quizName1 }}.png" alt="{{ quizName1 }} logo"/>
+                    <p class="quizCardText">{{ quizName1 }} Quiz</p>
+                    <a href="/{{ quizLink1 }}">
+                        <button>Start!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="quizCard">
+                    <img src="static/quizcardpics/{{ quizName2 }}.png" alt="{{ quizName2 }}"/>
+                    <p class="quizCardText">{{ quizName2 }} Quiz</p>
+                    <a href="/{{ quizLink2 }}">
+                        <button>Start!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="quizCard">
+                    <img src="static/quizcardpics/{{ quizName3 }}.png" alt="{{ quizName3 }}"/>
+                    <p class="quizCardText">{{ quizName3 }} Quiz</p>
+                    <a href="/{{ quizLink3 }}">
+                        <button>Start!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="indexBottom">
+        <div style="text-align: center; padding-top: 3%; padding-bottom: 8%;">
+            <div class="categories">
+                <div class="quizCard">
+                    <img src="static/quizcardpics/{{ quizName4 }}.png" alt="{{ quizName4 }}"/>
+                    <p class="quizCardText">{{ quizName4 }} Quiz</p>
+                    <a href="/{{ quizLink4 }}">
+                        <button>Start!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="quizCard">
+                    <img src="static/quizcardpics/{{ quizName5 }}.png" alt="{{ quizName5 }}"/>
+                    <p class="quizCardText">{{ quizName5 }} Quiz</p>
+                    <a href="/{{ quizLink5 }}">
+                        <button>Start!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="quizCard">
+                    <img src="static/quizcardpics/{{ quizName6 }}.png" alt="{{ quizName6 }}"/>
+                    <p class="quizCardText">{{ quizName6 }} Quiz</p>
+                    <a href="/{{ quizLink6 }}">
+                        <button>Start!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="indexBottom">
+        <div style="text-align: center; padding-top: 3%; padding-bottom: 8%;">
+            <div class="categories">
+                <div class="quizCard">
+                    <img src="static/quizcardpics/{{ quizName7 }}.png" alt="{{ quizName7 }}"/>
+                    <p class="quizCardText">{{ quizName7 }} Quiz</p>
+                    <a href="/{{ quizLink7 }}">
+                        <button>Start!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="quizCard">
+                    <img src="static/quizcardpics/{{ quizName8 }}.png" alt="{{ quizName8 }}"/>
+                    <p class="quizCardText">{{ quizName8 }} Quiz</p>
+                    <a href="/{{ quizLink8 }}">
+                        <button>Start!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="quizCard">
+                    <img src="static/quizcardpics/{{ quizName9 }}.png" alt="{{ quizName9 }}"/>
+                    <p class="quizCardText">{{ quizName9 }} Quiz</p>
+                    <a href="/{{ quizLink9 }}">
+                        <button>Start!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

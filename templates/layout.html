@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Who Am I? | {% block title %}{% endblock %}</title>
+        <link href="/static/styles.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    </head>
+
+    <body>
+        <main>
+            <div class="navbar">
+                <div class="container flex">
+                    {% block navcontent %}{% endblock %}
+                    {% if session['logged_in'] %}
+                    <nav>
+                        <div style="display: inline-block; padding: 3%; width: 200px; text-align: center;">
+                            <a href="{{ url_for('logout') }}">
+                                <button>Logout</button>
+                            </a>
+                        </div>
+                    </nav>
+                    {% else %}
+                    <nav>
+                        <div style="display: inline-block; padding: 3%; width: 200px; text-align: center;">
+                            <a href="/login">
+                                <button>Login</button>
+                            </a>
+                            <a href="/register">
+                                <button>Register</button>
+                            </a>
+                        </div>
+                    </nav>
+                    {% endif %}
+                </div>
+            </div>
+                {% block main %}{% endblock %}
+        </main>
+    </body>
+</html>
