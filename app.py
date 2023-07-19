@@ -261,7 +261,6 @@ def superheroes():
     quizLink2 = "superhero-secret-identities-quiz"
     quizName3 = "Superhero Quotes"
     quizLink3 = "superhero-quotes-quiz"
-    return render_template("categories.html", quizName1=quizName1, quizName2=quizName2, quizName3=quizName3, quizLink1=quizLink1, quizLink2=quizLink2, quizLink3=quizLink3, category=category) 
-
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    return render_template("categories.html", quizName1=quizName1, quizName2=quizName2, 
+                           quizName3=quizName3, quizLink1=quizLink1, quizLink2=quizLink2, 
+                           quizLink3=quizLink3, category=category) 
