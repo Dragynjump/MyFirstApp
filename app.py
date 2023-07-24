@@ -242,7 +242,9 @@ def space():
     quizLink2 = "star-wars-planets-quiz"
     quizName3 = "Star Wars Quotes"
     quizLink3 = "star-wars-quotes-quiz"
-    return render_template("categories.html", quizName1=quizName1, quizName2=quizName2, quizName3=quizName3, quizLink1=quizLink1, quizLink2=quizLink2, quizLink3=quizLink3, category=category) 
+    return render_template("categories.html", quizName1=quizName1, quizName2=quizName2, 
+                           quizName3=quizName3, quizLink1=quizLink1, quizLink2=quizLink2, 
+                           quizLink3=quizLink3, category=category) 
 
 @app.route("/magic")
 def magic():
@@ -253,7 +255,9 @@ def magic():
     quizLink2 = "harry-potter-spells-quiz"
     quizName3 = "Harry Potter Quotes"
     quizLink3 = "harry-potter-quotes-quiz"
-    return render_template("categories.html", quizName1=quizName1, quizName2=quizName2, quizName3=quizName3, quizLink1=quizLink1, quizLink2=quizLink2, quizLink3=quizLink3, category=category) 
+    return render_template("categories.html", quizName1=quizName1, quizName2=quizName2, 
+                           quizName3=quizName3, quizLink1=quizLink1, quizLink2=quizLink2, 
+                           quizLink3=quizLink3, category=category) 
 
 @app.route("/superheroes")
 def superheroes():
