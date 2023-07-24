@@ -9,7 +9,10 @@ import random
 
 # Configure application
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///userinfo.db'
+# Local database
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///userinfo.db'
+# Online database
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://gtezfzjjosnmsm:ffede6d2272df73f786657a7fcba2cfb171d6a37892142eafd89b8ba9c7839b6@ec2-3-217-146-37.compute-1.amazonaws.com:5432/d4dn9nske7ujas'
 bcrypt = Bcrypt(app)
 db = SQLAlchemy()
 db.init_app(app)
