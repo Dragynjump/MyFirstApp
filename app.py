@@ -3,6 +3,7 @@ import os
 from flask import Flask, redirect, render_template, url_for, request, session
 from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from flask_login import UserMixin, LoginManager, login_user, login_required, logout_user, current_user
 from flask_bcrypt import Bcrypt
 import random
@@ -15,6 +16,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gtezfzjjosnmsm:ffede6d2272df73f786657a7fcba2cfb171d6a37892142eafd89b8ba9c7839b6@ec2-3-217-146-37.compute-1.amazonaws.com:5432/d4dn9nske7ujas'
 bcrypt = Bcrypt(app)
 db = SQLAlchemy()
+migrate = Migrate(db)
 db.init_app(app)
 app.config['SECRET_KEY'] = 'lunamoonpie'
 
