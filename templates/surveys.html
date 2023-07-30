@@ -6,10 +6,10 @@
 {% block navcontent %}
     <div style="float: left;">
         <a href="/{{ category }}">
-            <button style="text-align: center; background-color: #2867AE; width: 60px;"><img src="static/Arrow.png" height="50px" alt="Arrow"></button>
+            <button class="homeButtons" style="text-align: center; background-color: #2867AE;"><img src="static/Arrow.png" alt="Arrow"></button>
         </a>
         <a href="/">
-            <button style="text-align: center; background-color: #2867AE; width: 60px;"><img src="static/House.png" height="50px" alt="House"></button>
+            <button class="homeButtons" style="text-align: center; background-color: #2867AE;"><img src="static/House.png" alt="House"></button>
         </a>
     </div>
     <h1 style="font-size: 30px; padding-left: 125px;">{{ quizName }}</h1>
@@ -20,13 +20,13 @@
         <div id="quiz" style="padding-top: 2%; padding-left: 7%; padding-right: 7%;">
             <div class="surveyCard">
                 <div id="quizPicture" class="quizPicture">
-                    <img src="static/surveypics/Q1.png" height="180px" alt="Quiz picture">
+                    <img src="static/surveypics/Q1.png" alt="Quiz picture">
                 </div>
-                <h2 id="questionNumber" style="color: #2867ae; font-size: 150%;">Q</h2>
-                <h3 id="question" style="color: #2867ae; font-size: 140%">Question</h3>
+                <h2 id="questionNumber">Q</h2>
+                <h3 id="question">Question</h3>
                 <hr>
                 <form>
-                    <div style="margin-left: auto; margin-right: auto; padding-top: 4px; padding-bottom: 4px;">
+                    <div style="margin-left: auto; margin-right: auto; padding-bottom: 4px;">
                         <div class="surveyOptions">
                             <div>
                                 <input type="radio" name="answer" id="a" class="answer">
@@ -45,9 +45,9 @@
                                 <label for="d" id="d_text">Answer</label>
                             </div>
                         </div>
-                    </div>
-                    <div style="padding-top: 20px;">
-                        <button type="button" id="submit" class="nextButton">Next</button>
+                        <div class="nextButton">
+                            <button type="button" id="submit">Next</button>
+                        </div>
                     </div>
                 </form>
             </div>

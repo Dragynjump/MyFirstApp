@@ -15,7 +15,7 @@ app = Flask(__name__)
 # Online database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gtezfzjjosnmsm:ffede6d2272df73f786657a7fcba2cfb171d6a37892142eafd89b8ba9c7839b6@ec2-3-217-146-37.compute-1.amazonaws.com:5432/d4dn9nske7ujas'
 bcrypt = Bcrypt(app)
-db = SQLAlchemy()
+db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 db.init_app(app)
 app.config['SECRET_KEY'] = 'lunamoonpie'

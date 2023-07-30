@@ -61,6 +61,21 @@ body {
     float: top;
 }
 
+.navbar img {
+    height: 50px;
+}
+
+.loginButtons {
+    display: inline-block; 
+    padding: 3%; 
+    width: 200px; 
+    text-align: center;
+}
+
+.homeButtons {
+    width: 60px;
+}
+
 .navbar button {
     width: 90px;
     padding: 5%;
@@ -140,6 +155,16 @@ body {
     font-family: arial;
 }
 
+.survey h2 {
+    color: #2867ae; 
+    font-size: 150%;
+}
+
+.survey h3 {
+    color: #2867ae; 
+    font-size: 140%;
+}
+
 .surveyCard {
     margin-left: auto; 
     margin-right: auto; 
@@ -189,6 +214,10 @@ input[type="radio"]:checked + label {
 }
 
 .nextButton {
+    padding-top: 14px;
+}
+
+.nextButton{
     background-color: #2867ae; 
     border: none; 
     color: #f0f4fa;
@@ -205,12 +234,13 @@ input[type="radio"]:checked + label {
     cursor: pointer;
 }
 
-.nextButton:hover {
+.nextButton button:hover {
     background-color: #164B86;
 }
 
 .quizPicture {
     text-align: center;
+    size: 180px;
 }
 
 /* Login and Register stylings */
@@ -292,4 +322,44 @@ input[type="radio"]:checked + label {
 .loginLeftSide h1 {
     font-size: 45px; 
     border-bottom: 2px solid #aeb4bb;
+}
+
+@media screen and (max-width:600px) {
+
+/* Survey stylings */
+.surveyOptions {
+    padding-top: 10px; 
+    display: inline-block;
+    width: 100%;
+}
+
+.surveyOptions div {
+    padding-top: 5px;
+}
+
+.survey h2 {
+    font-size: 130%;
+}
+
+.survey h3 {
+    font-size: 120%
+}
+
+label {
+    font-size: 18px; 
+    font-weight: 400px; 
+    height: 70px;
+    padding: 10px; 
+    font-weight: bold;
+}
+
+.nextButton button{
+    width: 100%;
+    height: 70px;
+}
+
+/* Navbar stylings */
+.navbar h1 {
+    font-size: 14px;
+}
 }

@@ -16,7 +16,7 @@
                     {% block navcontent %}{% endblock %}
                     {% if session['logged_in'] %}
                     <nav>
-                        <div style="display: inline-block; padding: 3%; width: 200px; text-align: center;">
+                        <div class="loginButtons">
                             <a href="{{ url_for('logout') }}">
                                 <button>Logout</button>
                             </a>
@@ -24,7 +24,7 @@
                     </nav>
                     {% else %}
                     <nav>
-                        <div style="display: inline-block; padding: 3%; width: 200px; text-align: center;">
+                        <div class="loginButtons">
                             <a href="/login">
                                 <button>Login</button>
                             </a>
