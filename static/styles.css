@@ -213,7 +213,7 @@ input[type="radio"]:checked + label {
     color: #f0f4fa;
 }
 
-.nextButton {
+.nextButtonDiv {
     padding-top: 14px;
 }
 
