@@ -63,6 +63,11 @@ linksToQuizzes = {'Star Wars': 'star-wars-quiz','Star Wars Planets': 'star-wars-
                 'Superhero': 'superhero-quiz','Superhero Secret Identities': 'superhero-secret-identities-quiz',
                 'Superhero Quotes': 'superhero-quotes-quiz'}
 
+@app.route('/create')
+def create():
+    db.create_all()
+    return 'All tables created'
+
 # Load homepage on start
 @app.route("/")
 def index():
