@@ -158,9 +158,7 @@ submitBtn.addEventListener('click', () => {
 					<h3 style="font-size: 190%; color: #2867ae; text-align: center;">You got ${score}/${quizData.length} correct!</h3>
 				</div>
                 <br><br>
-				<div class="nextButton">
-				    <button type="button" onclick="location.reload()">Retry</button>
-                <div>
+				<button type="button" onclick="location.reload()" class="nextButton">Retry</button>
 			</div>
             `
         }
