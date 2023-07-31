@@ -17,7 +17,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gtezfzjjosnmsm:ffede6d2272
 bcrypt = Bcrypt(app)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-db.init_app(app)
 app.config['SECRET_KEY'] = 'lunamoonpie'
 
 # Configure Login manager
